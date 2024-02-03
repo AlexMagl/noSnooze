@@ -1,0 +1,144 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  margin: 0;
+  color: #ffffff;
+}
+
+
+/* For dark/light mode switching */
+:root{
+  --primary-color: #F6F6F6;
+  --secondary-color: #282c34;
+  
+}
+.light-mode {
+  --primary-color: #282c34;
+  --secondary-color: #F6F6F6;
+}
+
+header {
+  color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #1E56A0;
+  max-width: 100%;
+  height: 10vh;
+  padding: 1em 1em;
+  gap: 2.5em;
+}
+
+#header img {
+  height: 7.5vh;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#darklightmode {
+  height: 5vh;
+  cursor: pointer;
+}
+
+#nosnooze {
+  background: linear-gradient(to left,#21a5ca, #F6F6F6 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+main {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-flow: column wrap;
+  /* justify-content: center; */
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+}
+
+#clock {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  margin: 10vh 0;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+  border: 2px solid #1E56A0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 12vh;
+}
+
+.container {
+  background-color: #1E56A0;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 20px;
+  padding: 2vh;
+  height: 18vh;
+}
+
+.container, h1 {
+  margin-bottom: 20px;
+  color: #F6F6F6;
+}
+
+input[type="time"],
+#setAlarm,
+#userAnswerPopup {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+#countdown {
+  font-size: 3em;
+  color: var(--secondary-color);
+}
+
+#questionPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-color);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  border-radius: 10px;
+}
+
+#questionPopup #question {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+#questionPopup input[type="text"],
+#questionPopup button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#questionPopup input[type="text"] {
+  width: 80%;
+}
+
+#questionPopup button {
+  background-color: #1E56A0;
+  color: var(--secondary-color);
+}
